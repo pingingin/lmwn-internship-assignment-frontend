@@ -1,0 +1,1 @@
+# lmwn-internship-assignment-frontend

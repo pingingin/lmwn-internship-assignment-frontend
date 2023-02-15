@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 * {
     margin: 0;
+    font-family: 'Prompt', sans-serif;
+    font-size: 100%;
 }
 
 .banner{
@@ -24,106 +27,3 @@
     font-size: 30px;
 }
 
-.menus {
-    display: flex;
-    margin: 20px 0;
-}
-
-.menus img{
-    border-radius: 10px;
-}
-
-.menus .detail {
-    display: grid;
-    margin-left: 20px;
-}
-
-.menus .detail .name-menu {
-    margin-top: 5px;
-}
-
-.menus .detail .price {
-    display: flex;
-    margin-top: -20px;
-}
-
-.menus .detail .price .full-price {
-    text-decoration-line: line-through; 
-}
-
-.menus .detail .price .sold {
-    margin-left: 3px;
-}
-
-.container-modal {
-    display: grid;
-}
-
-.container-modal .menu{
-    display: flex;
-    justify-content: space-between;
-}
-
-.container-modal .name-menu{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 40px;
-    text-align: center;
-}
-
-.container-modal .drop-down{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 40px;
-    padding-right: 20px;
-}
-
-.container-modal .img-modal{
-    width: 100%;
-    height: 40vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0;
-}
-
-.container-modal .content{
-    padding: 1% 5%;
-}
-
-.container-modal .content .price{
-    font-size: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #d2d2d2;
-}
-
-.container-modal .content .label{
-    display: flex;
-}
-
-.container-modal .content .label ul{
-    list-style-type: none;
-}
-
-.container-modal .content .label ul li{
-    justify-content: space-between;
-    font-size: 15px;
-}
-
-.container-modal .content .label ul>p{
-    font-size: 20px;
-}
-
-.count-page{
-    display: flex;
-}
-
-.count-page div:not(.page){
-    background-color: #20ff49;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.count-page .disable-button{
-    pointer-events: none;
-}

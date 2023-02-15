@@ -1,0 +1,55 @@
+.count-page{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 0;
+    text-align: center;
+}
+
+.count-page li{
+    list-style: none;
+}
+
+.count-page .page{
+    margin: 0 10px;
+}
+
+.count-page li{
+    padding: 7px 10px;
+}
+
+.count-page .left{
+    margin-right: -1px;
+}
+
+.count-page .right{
+    margin-left: -1px;
+}
+
+.count-page .first{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.count-page .last{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.count-page li:not(.page){
+    cursor: pointer;
+    color: rgb(109, 199, 109);
+    border: 1px solid rgb(109, 199, 109);
+}
+
+.count-page li:hover:not(.page){
+    cursor: pointer;
+    color: rgb(41, 41, 41);
+    background-color: #d0d0d0;
+}
+
+.count-page .disable-button{
+    pointer-events: none;
+    color: rgb(196, 196, 196) !important;
+}

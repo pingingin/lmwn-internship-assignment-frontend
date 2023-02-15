@@ -12,7 +12,7 @@ interface Restaurant {
     }
 }
 
-interface getFullMenu{
+interface FullMenu{
     name: string
     id: string
     thumbnailImage?: string
@@ -37,7 +37,7 @@ interface RestaurantFullMenu {
     name: string
     id: number
     coverImage: string
-    menus: getFullMenu[]
+    menus: FullMenu[]
     activeTimePeriod: {
         open: string
         close: string
@@ -50,11 +50,9 @@ const getRestaurant = async (req: Request, res: Response, next: NextFunction) =>
     let result: AxiosResponse = await axios.get(`https://us-central1-wongnai-frontend-assignment.cloudfunctions.net/api/restaurants/${restaurantId}.json`);
     let message: Restaurant = result.data;
 
-
-
     async function getResFull(message: Restaurant) {
-        let menus: getFullMenu[] = [];
-        let resMenus: getFullMenu[] = [];
+        let menus: FullMenu[] = [];
+        let resMenus: FullMenu[] = [];
         await Promise.all(message.menus.map((obj: string) =>
             axios.get(`https://us-central1-wongnai-frontend-assignment.cloudfunctions.net/api/restaurants/${message.id}/menus/${obj}/full.json`).then(response => {
             menus.push(response.data);
@@ -68,23 +66,11 @@ const getRestaurant = async (req: Request, res: Response, next: NextFunction) =>
                 }
             }
         });
-        console.log(menus.length)
-        console.log(resMenus.length)
+        
         return resMenus;
     }
 
-    // async function getResFull(message: Restaurant) {
-    //     let menus: getFullMenu[] = [];
-    //     await Promise.all(message.menus.map(async (obj: string) =>
-    //         await axios.get(`https://us-central1-wongnai-frontend-assignment.cloudfunctions.net/api/restaurants/${message.id}/menus/${obj}/full.json`).then(response => {
-    //         menus.push(response.data);
-    //       })
-    //     ));
-    //     return menus;
-    // }
-
     let menus = await getResFull(message)
-
 
     let RestaurantFullMenu: RestaurantFullMenu = {
         name: message.name,
@@ -100,22 +86,4 @@ const getRestaurant = async (req: Request, res: Response, next: NextFunction) =>
     return res.status(200).json(RestaurantFullMenu);
 };
 
-// get Short Menu
-const getShortMenu = async (req: Request, res: Response, next: NextFunction) => {
-    let restaurantId: string = req.params.restaurantId
-    let menuName: string = req.params.menuName
-    let result: AxiosResponse = await axios.get(`https://us-central1-wongnai-frontend-assignment.cloudfunctions.net/api/restaurants/${restaurantId}/menus/${menuName}/short.json`);
-    let message: JSON = result.data;
-    return res.status(200).json(message);
-};
-
-// get Full Menu
-const getFullMenu = async (req: Request, res: Response, next: NextFunction) => {
-    let restaurantId: string = req.params.restaurantId
-    let menuName: string = req.params.menuName
-    let result: AxiosResponse = await axios.get(`https://us-central1-wongnai-frontend-assignment.cloudfunctions.net/api/restaurants/${restaurantId}/menus/${menuName}/full.json`);
-    let message: JSON = result.data;
-    return res.status(200).json(message);
-};
-
-export default { getRestaurant, getShortMenu, getFullMenu };
+export default { getRestaurant };

@@ -1,0 +1,33 @@
+.box-search .search-bar {
+    width: 100%;
+    border-right: none;
+    border: 1px solid rgb(109, 199, 109);
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+    text-indent: 5px;
+}
+
+.box-search .search-bar:focus{
+    width: 100%;
+    outline: 1px solid rgb(109, 199, 109);
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+}
+
+.box-search .clear {
+    color: #fff;
+    border: none;
+    background-color: rgb(109, 199, 109);
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    padding: 0 10px;
+}
+
+.box-search .clear:hover {
+    color: rgb(109, 199, 109);
+    border: 1px solid rgb(109, 199, 109);
+    border-left: none;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}

@@ -16,10 +16,11 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => res.json({"restaurant" : ["567051", "227018"]}));
+app.get("/", (req, res) => res.status(200).json({
+	restaurant : [{name: "Ekkamai Macchiato - Home Brewer",id: "227018"},
+	 			{name: "ลืมเคี้ยว",id: "567051"}]
+}));
 app.get('/restaurants/:restaurantId', api.getRestaurant);
-app.get('/restaurants/:restaurantId/menus/:menuName/short', api.getShortMenu);
-app.get('/restaurants/:restaurantId/menus/:menuName/full', api.getFullMenu);
 
 try {
 	app.listen(port, (): void => {

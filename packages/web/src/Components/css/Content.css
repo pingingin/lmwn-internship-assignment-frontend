@@ -1,0 +1,213 @@
+.menus {
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.menus img{
+    border-radius: 10px;
+}
+
+.menus .detail {
+    display: grid;
+    margin-left: 20px;
+}
+
+.menus .detail .name-menu {
+    margin-top: 5px;
+}
+
+.menus .detail .price {
+    display: flex;
+    margin-top: -20px;
+}
+
+.menus .detail .price .full-price {
+    text-decoration-line: line-through; 
+}
+
+.menus .detail .price .sold {
+    margin-left: 3px;
+}
+
+.container-modal {
+    display: grid;
+}
+
+.container-modal .menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-modal .name-menu{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 27px;
+    text-align: center;
+}
+
+.container-modal .drop-down{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.container-modal .img-modal{
+    width: 100%;
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0;
+}
+
+.container-modal .content{
+    padding: 1% 5%;
+}
+
+.container-modal .content .price{
+    font-size: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.container-modal .content .label{
+    display: flex;
+}
+
+.container-modal .content .label ul{
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.container-modal .content .label ul li{
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.container-modal .content .label ul>p{
+    font-size: 18px;
+}
+
+.box-search {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 950px) {
+    .container-modal .name-menu{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-modal .name-menu{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container-modal .menu{
+        height: auto;
+    }
+
+    .container-modal .name-menu{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        text-align: center;
+        max-width: 30rem;
+    }
+
+    .container-modal .drop-down{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        padding-right: 10px;
+    }
+
+    .container-modal .content .price{
+        font-size: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #d2d2d2;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        margin: 0px 20%;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .container-modal .name-menu{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        margin: 0px 13%;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .container-modal .name-menu{
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        margin: 0px 10%;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .container-modal .name-menu{
+        margin-top: 10px;
+        margin-bottom: 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .container-modal .drop-down{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        padding-right: 5px;
+    }
+
+    .container-modal .img-modal{
+        width: 100%;
+        height: 40vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0;
+    }
+
+    .container-modal .content .price{
+        font-size: 16px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #d2d2d2;
+    }
+}

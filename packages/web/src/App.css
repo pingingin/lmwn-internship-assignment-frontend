@@ -5,6 +5,25 @@
     font-size: 100%;
 }
 
+.home-page {
+    display: grid;
+    margin: auto;
+    margin-top: 40vh;
+    margin-left: 40%;
+    padding: 30px 0;
+    font-size: 28px;
+}
+
+.home-page .link{
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.home-page a{
+    text-decoration: none;
+    color: rgb(109, 199, 109);
+}
+
 .banner{
     height: 100%; 
     background-position: center;

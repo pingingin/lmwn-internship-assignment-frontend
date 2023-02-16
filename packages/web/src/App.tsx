@@ -43,6 +43,7 @@ function App() {
   else if(isHomepage) {
     return (
       <div className="home-page">
+        <p>ยินดีต้อนรับ กรุณาเลือกร้านอาหาร</p>
         {homepage?.restaurant.map((no, i) => {
           return (<div className="link" key={i}>
                   <a href={`http://localhost:3000/restaurants/${no.id}`}>{no.name} {no.id}</a>
